@@ -3,19 +3,27 @@
 Ubuntuを便利に使うためのshell scriptを作っていく。  
 分散すると厄介なのでここにまとめておいて管理する。
 
-## 操作メモ
+## 操作記録
+### ソースの入手とコマンド化
 コマンド化の操作を備忘録として記録する。  
 `/usr/local/bin`にファイルをダウンロードし、`/usr/bin`にシンボリックリンクを作成。必要に応じて`~/.bash_aliases`にエイリアスを作成して入力を短縮する。コマンド化するスクリプトファイルを`xxx.sh`としコマンドを`xxx`として作成する。
 ```
 $ cd /usr/local/bin
 $ sudo git clone https://github.com/Nagasaka-Hiroki/ubuntu_shell_script.git
 $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
-$ sudo chmod 755 ubuntu_shell_script/xxx.sh 
+$ sudo chmod 755 ubuntu_shell_script/xxx.sh #←あまり良くない
 ```
 上記の一連のコマンドで新しいコマンド`xxx`が使えるようになったはず。  
 もしターミナルの再起動が必要であれば`exec $SHELL -l`でその場で再起動できるはず。
 
-また、新しいスクリプトが作成された場合は`git pull`コマンドでリポジトリの更新を取得すれば良いはず。操作をした場合はここに再度記録する。
+また、新しいスクリプトが作成された場合は`git pull`コマンドでリポジトリの更新を取得すれば良いはず。~~~操作をした場合はここに再度記録する。~~~
+
+### リポジトリの更新
+リポジトリを更新する。ソースの入手とコマンド化でクローンしたファイルをに対して実行権限をつけていたがそれがあまり良くなかった。直接クローンできなくなるので調整する。ローカル側でファイルに対して実行権限を与え、リポジトリを更新する。
+```
+$ chmod 755 make_todo_index.sh
+#リポジトリを更新する
+```
 
 - 参考  
 > - [新しいLinuxの教科書(SB Creativeのサイトに飛びます)](https://www.sbcr.jp/product/4797380941/)
