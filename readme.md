@@ -31,7 +31,7 @@ $ sudo chmod 755 ubuntu_shell_script/xxx.sh
 ### 使い方
 以下のように実行する
 ```
-./make_md_index.sh xxx yyy zzz
+./make_todo_index.sh xxx yyy zzz
 ```
 以下の出力を得る。
 ```
