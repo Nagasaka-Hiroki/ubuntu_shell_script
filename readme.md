@@ -83,3 +83,5 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 ### 追記
 1. コマンド化でload errorが出たので修正する。パスを取得してファイル名に付け足す。
 1. シンボリックリンクの場合エラーが出るので修正。
+1. readlinkの出力がターミナルに出る。リダイレクトを/dev/nullに変更する。以下参考  
+[５分で一通り理解できる！Linuxのリダイレクト 使い方と種類まとめ](https://eng-entrance.com/linux-redirect)

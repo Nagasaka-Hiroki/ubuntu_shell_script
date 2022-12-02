@@ -3,7 +3,7 @@
 echo $1
 
 #シェルスクリプトが存在するパスを取得する。
-if readlink $0; then
+if readlink $0 > /dev/null 2>&1 ; then
     #シンボリックリンクの場合、リンク先を取得
     dir_path=$(readlink $0)
     dir_path=$(dirname $dir_path)
