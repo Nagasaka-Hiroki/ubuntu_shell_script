@@ -50,3 +50,32 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 #### zzz
 ```
 
+## /get_ref_md/get_ref_md.sh
+### 概要
+作業記録の途中でWebサイトのURLとタイトルを毎回両方コピーするのが面倒。これを解消する。
+
+すなわち、コマンドを実行することで以下の内容を取得する。
+```bash
+$ ./get_ref_md.sh url_to_ref
+#クリップボードに以下を保存する。
+[title of ref](url_to_ref)
+```
+しかし、実行によって引数に渡したURLにアクセスする。そのためむやみに実行しないように注意する。
+
+また、実行の本体はrubyでバージョンは`3.1.2`である。
+
+### 使い方
+```bash
+$ ./get_ref_md.sh url_to_ref
+#クリップボードに以下を保存する。
+[title of ref](url_to_ref)
+```
+
+### Nokogiri
+このプログラムはNokogiri gemを使っている。このgemはMITライセンスの元で利用できる。以下にNokogiriのライセンス条文のURLを示す。
+
+- 著作権表記  
+Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori MUSHA, John Shahid, Karol Bucek, Sam Ruby, Craig Barnes, Stephen Checkoway, Lars Kanis, Sergio Arbeo, Timothy Elliott, Nobuyoshi Nakada, Charles Nutter, Patrick Mahoney.
+
+- ライセンス全文  
+[nokogiri/LICENSE.md](https://github.com/sparklemotion/nokogiri/blob/main/LICENSE.md)
