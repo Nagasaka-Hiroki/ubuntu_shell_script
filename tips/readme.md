@@ -40,18 +40,25 @@ bundle exec jekyll serve
 
 コマンドでHTMLの解析はできなくはないが、上記のものを使ったほうが便利だと思う。
 
-### whereami.sh
-シェルスクリプト本体が書かれているパスを取得する。
-
-自分で書いていたが、他にうまい書き方をしている人がいたので参考にする。以下参考。
-- [[bash] 実行スクリプトの絶対パスの取得](https://qiita.com/koara-local/items/2d67c0964188bba39e29)
-
 ### 参考URL
 - [curlコマンドでちょこっとHTTPリクエストを試すだけの記事](https://qiita.com/akane_kato/items/34b408336f4ec372b139)
 - [httpbin.org](http://httpbin.org/#/)
 - [curlコマンドでapiを叩く](https://qiita.com/buntafujikawa/items/758425773b2239feb9a7)
 - [curl.1 the man page](https://curl.se/docs/manpage.html)
 
+---
+
+## whereami.sh
+シェルスクリプト本体が書かれているパスを取得する。
+
+自分で書いていたが、他にうまい書き方をしている人がいたので参考にする。以下参考。
+- [[bash] 実行スクリプトの絶対パスの取得](https://qiita.com/koara-local/items/2d67c0964188bba39e29)
 
 ---
 
+## path_to_link.sh
+readlinkを使ったシンボリックリンクのリンク先のパスを取得する。
+
+- [readlink(1)](https://ja.manpages.org/readlink)
+- [readlinkコマンドが意外にすごい件について](https://tech.buty4649.net/entry/2014/03/25/readlink%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%8C%E6%84%8F%E5%A4%96%E3%81%AB%E3%81%99%E3%81%94%E3%81%84%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- [readlink コマンド](https://hydrocul.github.io/wiki/commands/readlink.html)  

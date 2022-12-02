@@ -3,7 +3,14 @@
 echo $1
 
 #シェルスクリプトが存在するパスを取得する。
-dir_path=$(cd $(dirname $0); pwd)
+if readlink $0; then
+    #シンボリックリンクの場合、リンク先を取得
+    dir_path=$(readlink $0)
+    dir_path=$(dirname $dir_path)
+else
+    #そうでない場合は普通にパスを取得
+    dir_path=$(cd $(dirname $0); pwd)
+fi
 
 #Rubyプログラムを実行
 #Webサイトのタイトルを文字列として取得
