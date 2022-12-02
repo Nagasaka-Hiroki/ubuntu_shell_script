@@ -79,3 +79,8 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 
 - ライセンス全文  
 [nokogiri/LICENSE.md](https://github.com/sparklemotion/nokogiri/blob/main/LICENSE.md)
+
+### 追記
+コマンド化でload errorが出たので修正する。パスを取得してファイル名に付け足す。以下参考。
+
+- [[bash] 実行スクリプトの絶対パスの取得](https://qiita.com/koara-local/items/2d67c0964188bba39e29)

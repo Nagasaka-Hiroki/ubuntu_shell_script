@@ -40,6 +40,12 @@ bundle exec jekyll serve
 
 コマンドでHTMLの解析はできなくはないが、上記のものを使ったほうが便利だと思う。
 
+### whereami.sh
+シェルスクリプト本体が書かれているパスを取得する。
+
+自分で書いていたが、他にうまい書き方をしている人がいたので参考にする。以下参考。
+- [[bash] 実行スクリプトの絶対パスの取得](https://qiita.com/koara-local/items/2d67c0964188bba39e29)
+
 ### 参考URL
 - [curlコマンドでちょこっとHTTPリクエストを試すだけの記事](https://qiita.com/akane_kato/items/34b408336f4ec372b139)
 - [httpbin.org](http://httpbin.org/#/)
