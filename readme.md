@@ -85,3 +85,4 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 1. シンボリックリンクの場合エラーが出るので修正。
 1. readlinkの出力がターミナルに出る。リダイレクトを/dev/nullに変更する。以下参考  
 [５分で一通り理解できる！Linuxのリダイレクト 使い方と種類まとめ](https://eng-entrance.com/linux-redirect)
+1. セキュリティに関する通知が後日届いたためGemfileの内容を変更して`bundle update`を実行。
