@@ -9,4 +9,4 @@ html_file = Net::HTTP.get(URI.parse(ARGV[0]))
 # Nokogiriを使ってhtmlをdomに変換する。
 doc = Nokogiri::HTML.parse(html_file)
 # domからtitleタグをとってきて、タグ内のhtmlを取得しターミナルに出力する。
-print doc.at('title').inner_html
+print doc.at('title').inner_html.gsub(/[\s]*[\|][\s]*/,"｜")

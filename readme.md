@@ -87,6 +87,18 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 [５分で一通り理解できる！Linuxのリダイレクト 使い方と種類まとめ](https://eng-entrance.com/linux-redirect)
 1. セキュリティに関する通知が後日届いたためGemfileの内容を変更して`bundle update`を実行。
 
+### 改良
+　タイトルによっては`|（パイプ）`が入っていることがある。しかしマークダウンでは表の一つとして認識されて修正が面倒になる。そのため`｜（全角のパイプ）`に変換すると回避できるため、置換する処理を加える。
+
+置換の方法は正規表現を使う。以下のサイトを使うととても便利である。
+- [Rubular: a Ruby regular expression editor](https://rubular.com/)
+
+末尾に`gsub`を追加するだけだがこれでパイプ(厳密には半角パイプの前後の空白も含む)を全角のパイプに置換することができる。
+
+```ruby
+print doc.at('title').inner_html.gsub(/[\s]*[\|][\s]*/,"｜")
+```
+
 ## /get_domain_name/get_domain_name.sh
 ### 背景
 　Google検索ではドメインを指定して検索することができる。例えばgithub.comのサイトの情報を調べたいときには以下のように検索すれば目的の情報に効果的にたどり着くことができる。
