@@ -99,6 +99,13 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 print doc.at('title').inner_html.gsub(/[\s]*[\|][\s]*/,"｜")
 ```
 
+正規表現のメタ文字は以下を参考にした。
+- [正規表現サンプル集](https://www.megasoft.co.jp/mifes/seiki/meta.html)
+
+またrubyの正規表現については以下に書かれている。
+- [正規表現 (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/spec=2fregexp.html)
+
+
 ## /get_domain_name/get_domain_name.sh
 ### 背景
 　Google検索ではドメインを指定して検索することができる。例えばgithub.comのサイトの情報を調べたいときには以下のように検索すれば目的の情報に効果的にたどり着くことができる。
