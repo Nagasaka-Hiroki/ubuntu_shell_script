@@ -149,3 +149,7 @@ $ ./get_domain_name.sh wrong_word
 
 rubyのexit文に関しては以下を参考にした。
 - [Kernel.#exit (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Kernel/m/exit.html)
+
+### 追記
+以下のjavascriptのリファレンスを追加。`js`で呼び出せる。
+- [Web API｜MDN](https://developer.mozilla.org/ja/docs/Web/API)

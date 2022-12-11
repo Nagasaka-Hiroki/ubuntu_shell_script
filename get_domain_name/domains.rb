@@ -5,6 +5,7 @@ class DomainHolder
     @domains={ 
         github:         "github.com",
         mdn:            "developer.mozilla.org/ja/docs",
+        js:             "developer.mozilla.org/ja/docs/Web/API",
         ruby:           "docs.ruby-lang.org/ja",
         rails:          "api.rubyonrails.org",
         rails_guide:    "railsguides.jp",
@@ -12,12 +13,13 @@ class DomainHolder
     }
     #一覧を表示する
     def self.show_domains
+        border_line="[--------------------------------------------------]"
         puts "[key] : [value]"
-        puts "[--------------------------------------------------]"
+        puts border_line
         @domains.each do |key, value|
             puts " #{key} : #{value}"
         end
-        puts "[--------------------------------------------------]"
+        puts border_line
     end
     #一致したキーに対応する値を出力する
     def self.print_domain(key)
