@@ -6,7 +6,6 @@ path2script=$(dirname $(readlink -f $0))
 #引数がないときは一覧が出る。ステータスは1が返る
 #引数があるときは１つ目を使用してコマンドを実行する。
 #一致すればステータスは0、しなければ2が返る。
-#result="$(ruby $path2script/print_domain.rb $1)"
 result=$(ruby $path2script/print_domain.rb $1)
 #ステータスを消えないように保存
 status=$?
