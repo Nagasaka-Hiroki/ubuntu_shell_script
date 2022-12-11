@@ -86,3 +86,47 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 1. readlinkの出力がターミナルに出る。リダイレクトを/dev/nullに変更する。以下参考  
 [５分で一通り理解できる！Linuxのリダイレクト 使い方と種類まとめ](https://eng-entrance.com/linux-redirect)
 1. セキュリティに関する通知が後日届いたためGemfileの内容を変更して`bundle update`を実行。
+
+## /get_domain_name/get_domain_name.sh
+### 背景
+　Google検索ではドメインを指定して検索することができる。例えばgithub.comのサイトの情報を調べたいときには以下のように検索すれば目的の情報に効果的にたどり着くことができる。
+
+```
+site:github.com words_you_want_to_know
+```
+これでgithub.com上の`words_you_want_to_know`という言葉をGoogle側で検索することができる。  
+これはGoogleの検索方法の一種で、検索精度を高める手段である。以下に検索精度を高める方法について説明しているサイトを示す。以下のサイトはGoogleが提供している情報であるため信頼性が高く、かつ簡潔にまとまっているので非常に参考になると思う。
+- [Refine web searches - Google Search Help](https://support.google.com/websearch/answer/2466433)
+
+　この例では覚えやすい`github.com`を例に上げた。しかしよく使用するサイトが覚えやすいとは限らない。例えばrubyのリファレンスのURLである以下に示す。
+- [https://docs.ruby-lang.org/ja/3.1/doc/index.html](https://docs.ruby-lang.org/ja/3.1/doc/index.html)
+
+上記サイトで検索する場合は以下のように検索する。
+```
+site:docs.ruby-lang.org/ja/3.1 words_you_want_to_know
+```
+覚えられないわけではないが、正直面倒である。他にも別のサイトで絞り込みたい場合にはより多くのドメイン名を覚えいないといけない。
+
+プログラムはこういった覚える操作が得意なのでコマンド化すれば検索が効率化できると考え制作しようと考えた。
+### 使い方
+以下のように実行する。
+```bash
+$ ./get_domain_name.sh
+#ドメインのリスト一覧が表示される
+$ ./get_domain_name.sh RUBY
+$ ./get_domain_name.sh ruby
+#site:docs.ruby-lang.org/ja をコピーする。
+$ ./get_domain_name.sh wrong_word
+入力したキーに対応するドメインがありません
+引数なしで実行すればドメインの一覧が出ます
+```
+
+### メモ
+　使用するサイトが増える場合は再度コードを追加する。今はrubyのクラスとして実装しているが、量によってはデータとして分離したほうがいいかもしれない。この点は今後の課題とする。
+
+### 参考
+改行周りが上手く行かなかったので以下を参考にした。
+- [bash で改行文字が echo で表示されない - ハックノート](https://hacknote.jp/archives/28215/)
+
+rubyのexit文に関しては以下を参考にした。
+- [Kernel.#exit (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Kernel/m/exit.html)

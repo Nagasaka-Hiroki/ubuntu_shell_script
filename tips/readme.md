@@ -62,3 +62,9 @@ readlinkを使ったシンボリックリンクのリンク先のパスを取得
 - [readlink(1)](https://ja.manpages.org/readlink)
 - [readlinkコマンドが意外にすごい件について](https://tech.buty4649.net/entry/2014/03/25/readlink%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%8C%E6%84%8F%E5%A4%96%E3%81%AB%E3%81%99%E3%81%94%E3%81%84%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 - [readlink コマンド](https://hydrocul.github.io/wiki/commands/readlink.html)  
+
+## prac_readlink.sh
+　一つ前のリンクにもあったが、readlinkには絶対パスを取得する機能のあるそうだ。`man readlinl`でも説明が見れるが日本語の方がわかりやすかったので以下に参考を示す。`-f`オプションが便利だと思った。`get_ref_md`はif文の練習を兼ねていたのでifを使ったが、`-f`を使えばif文も不要になりそうだ。
+
+- [readlink コマンド – シンボリックリンクファイルや絶対パスのファイル名を表示 | Linuxコマンド.NET](https://linuxcommand.net/readlink/)
+- [readlinkコマンドが意外にすごい件について](https://tech.buty4649.net/entry/2014/03/25/readlink%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%8C%E6%84%8F%E5%A4%96%E3%81%AB%E3%81%99%E3%81%94%E3%81%84%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
