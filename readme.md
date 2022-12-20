@@ -165,3 +165,9 @@ dockerのサイトを追加。`docker`で呼び出す。
 
 dockerの日本語リファレンスを追加。`docker_jp`で呼び出す。
 - [Docker ドキュメント日本語化プロジェクト — Docker-docs-ja 20.10 ドキュメント](https://docs.docker.jp/)
+
+Ubuntuマニュアルのリンクを追加。`jammy`で呼び出す。バージョンはUbuntu 22.04を指定している。
+- [Ubuntu Manpage: Directory Listing ](https://manpages.ubuntu.com/manpages/jammy/)
+
+Linux全般のコマンドのリファレンス。`man_linux`で呼び出す。Ubutnu特有の動作は上記のUbuntuマニュアルを参照すると上手く行くかもしれない。
+- [JM Project (Japanese)](https://linuxjm.osdn.jp/)

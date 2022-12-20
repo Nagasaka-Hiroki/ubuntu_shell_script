@@ -13,7 +13,9 @@ class DomainHolder
         rails_guide:    "railsguides.jp",
         rails_guide_en: "guides.rubyonrails.org",
         docker:         "docs.docker.com",
-        docker_jp:         "docs.docker.jp",
+        docker_jp:      "docs.docker.jp",
+        jammy:          "manpages.ubuntu.com/manpages/jammy",
+        man_linux:      "linuxjm.osdn.jp",
     }
     #一覧を表示する
     def self.show_domains
