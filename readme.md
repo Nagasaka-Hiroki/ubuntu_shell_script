@@ -161,7 +161,9 @@ githubのruby on railsのサイトを追加。`gh_rails`で呼び出せる。
 - [Ruby on Rails · GitHub](https://github.com/rails)
 
 dockerのサイトを追加。`docker`で呼び出す。
-- [Docker Documentation](https://docs.docker.com/)
+- [Docker Documentation](https://docs.docker.com/)  
+追記：以下のURLに差し替え。
+- [Docker ドキュメント｜Docker ドキュメント](https://matsuand.github.io/docs.docker.jp.onthefly/)
 
 dockerの日本語リファレンスを追加。`docker_jp`で呼び出す。
 - [Docker ドキュメント日本語化プロジェクト — Docker-docs-ja 20.10 ドキュメント](https://docs.docker.jp/)
