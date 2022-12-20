@@ -159,3 +159,9 @@ javascriptのリファレンスを追加。`es`で呼び出せる。
 
 githubのruby on railsのサイトを追加。`gh_rails`で呼び出せる。
 - [Ruby on Rails · GitHub](https://github.com/rails)
+
+dockerのサイトを追加。`docker`で呼び出す。
+- [Docker Documentation](https://docs.docker.com/)
+
+dockerの日本語リファレンスを追加。`docker_jp`で呼び出す。
+- [Docker ドキュメント日本語化プロジェクト — Docker-docs-ja 20.10 ドキュメント](https://docs.docker.jp/)
