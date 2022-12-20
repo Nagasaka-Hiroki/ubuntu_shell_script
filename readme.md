@@ -153,3 +153,9 @@ rubyのexit文に関しては以下を参考にした。
 ### 追記
 以下のjavascriptのリファレンスを追加。`js`で呼び出せる。
 - [Web API｜MDN](https://developer.mozilla.org/ja/docs/Web/API)
+
+javascriptのリファレンスを追加。`es`で呼び出せる。
+- [JavaScript Primer - 迷わないための入門書 #jsprimer](https://jsprimer.net/)
+
+githubのruby on railsのサイトを追加。`gh_rails`で呼び出せる。
+- [Ruby on Rails · GitHub](https://github.com/rails)

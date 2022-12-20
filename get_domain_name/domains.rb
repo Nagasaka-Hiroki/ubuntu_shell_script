@@ -4,8 +4,10 @@ class DomainHolder
     #よく検索するサイトのドメインを列挙する
     @domains={ 
         github:         "github.com",
+        gh_rails:       "github.com/rails",
         mdn:            "developer.mozilla.org/ja/docs",
         js:             "developer.mozilla.org/ja/docs/Web/API",
+        es:             "jsprimer.net",
         ruby:           "docs.ruby-lang.org/ja",
         rails:          "api.rubyonrails.org",
         rails_guide:    "railsguides.jp",
