@@ -19,11 +19,18 @@ class DomainHolder
     }
     #一覧を表示する
     def self.show_domains
-        border_line="[--------------------------------------------------]"
-        puts "[key] : [value]"
+        #初期化の処理
+        max_key_length = get_max_key_length
+        max_value_length = get_max_value_length
+        border_line="[-" + "-"* (max_key_length + max_value_length + " : ".length) + "-]"
+        header = "[ " + " " * (max_key_length - "key".length) + "key" + " : value" + " " * (max_value_length - "value".length) + " ]"
+        #描画の処理
+        puts header
         puts border_line
         @domains.each do |key, value|
-            puts " #{key} : #{value}"
+            space_k = "[ " + " " * (max_key_length - key.length)
+            space_v = " " * (max_value_length - value.length) + " ]"
+            puts "#{space_k}#{key} : #{value}#{space_v}"
         end
         puts border_line
     end
@@ -34,5 +41,16 @@ class DomainHolder
         else
             false
         end
+    end
+    private
+    #キーの中で最も長いキーの長さを返す。
+    def self.get_max_key_length
+        max_length_key = @domains.each_key.max_by { |key| key.length }
+        max_length_key.length
+    end
+    #バリューの中で最も長いバーリューの長さを返す。
+    def self.get_max_value_length
+        max_length_value = @domains.each_value.max_by { |key| key.length }
+        max_length_value.length
     end
 end
