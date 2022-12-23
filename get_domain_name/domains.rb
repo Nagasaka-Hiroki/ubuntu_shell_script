@@ -25,6 +25,7 @@ class DomainHolder
         border_line="[-" + "-"* (max_key_length + max_value_length + " : ".length) + "-]"
         header = "[ " + " " * (max_key_length - "key".length) + "key" + " : value" + " " * (max_value_length - "value".length) + " ]"
         #描画の処理
+        puts border_line
         puts header
         puts border_line
         @domains.each do |key, value|

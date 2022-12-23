@@ -174,5 +174,5 @@ Ubuntuマニュアルのリンクを追加。`jammy`で呼び出す。バージ�
 Linux全般のコマンドのリファレンス。`man_linux`で呼び出す。Ubutnu特有の動作は上記のUbuntuマニュアルを参照すると上手く行くかもしれない。
 - [JM Project (Japanese)](https://linuxjm.osdn.jp/)
 
-修正： 一覧表示を整形。
-
+修正： 一覧表示を整形。  
+修正： 一覧表示をもう少し修正。
