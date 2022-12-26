@@ -16,6 +16,8 @@ class DomainHolder
         docker_jp:      "docs.docker.jp",
         jammy:          "manpages.ubuntu.com/manpages/jammy",
         man_linux:      "linuxjm.osdn.jp",
+        man_git:        "git-scm.com/docs",
+        git_book:       "git-scm.com/book/ja/v2",
     }
     #一覧を表示する
     def self.show_domains

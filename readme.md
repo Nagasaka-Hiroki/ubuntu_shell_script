@@ -176,3 +176,8 @@ Linux全般のコマンドのリファレンス。`man_linux`で呼び出す。U
 
 修正： 一覧表示を整形。  
 修正： 一覧表示をもう少し修正。
+
+Gitコマンドのリファレンスを追加。`man_git`で呼び出す。
+- [Git - Reference](https://git-scm.com/docs)
+Git Bookから調べる場合は、`git_book`と入力する。
+- [Git - Book](https://git-scm.com/book/ja/v2)
