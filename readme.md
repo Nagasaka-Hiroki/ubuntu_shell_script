@@ -181,3 +181,6 @@ Gitコマンドのリファレンスを追加。`man_git`で呼び出す。
 - [Git - Reference](https://git-scm.com/docs)
 Git Bookから調べる場合は、`git_book`と入力する。
 - [Git - Book](https://git-scm.com/book/ja/v2)
+
+railsのURLをバージョン7.0.4(作成時の最新安定版)
+- [Ruby on Rails API](https://api.rubyonrails.org/v7.0.4/)

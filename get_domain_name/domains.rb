@@ -9,7 +9,7 @@ class DomainHolder
         js:             "developer.mozilla.org/ja/docs/Web/API",
         es:             "jsprimer.net",
         ruby:           "docs.ruby-lang.org/ja",
-        rails:          "api.rubyonrails.org",
+        rails:          "api.rubyonrails.org/v7.0.4",
         rails_guide:    "railsguides.jp",
         rails_guide_en: "guides.rubyonrails.org",
         docker:         "matsuand.github.io/docs.docker.jp.onthefly",
