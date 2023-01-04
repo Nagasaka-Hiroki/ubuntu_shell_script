@@ -1,4 +1,4 @@
-# Shell Script
+# Ubuntuを便利に使うためのshell script
 ## 概要
 Ubuntuを便利に使うためのshell scriptを作っていく。  
 分散すると厄介なのでここにまとめておいて管理する。
@@ -15,8 +15,10 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 上記の一連のコマンドで新しいコマンド`xxx`が使えるようになったはず。  
 もしターミナルの再起動が必要であれば`exec $SHELL -l`でその場で再起動できるはず。
 
-また、新しいスクリプトが作成された場合は`git pull`コマンドでリポジトリの更新を取得すれば良いはず。操作をした場合はここに再度記録する。  
-(一度失敗。mergeコマンドなど要勉強。今回は一度削除してソースの入手とコマンド化を再実行して修正した。)
+また、新しいスクリプトが作成された場合は`git pull`コマンドでリポジトリの更新を取得すれば良い。
+
+追記：  
+スクリプトの修正を`push`したあとは、単純に`sudo git pull`で変更を取得すれば更新できる。
 
 - 参考  
 > - [新しいLinuxの教科書(SB Creativeのサイトに飛びます)](https://www.sbcr.jp/product/4797380941/)
@@ -25,6 +27,11 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 > - [https://codelikes.com/git-pull/](https://codelikes.com/git-pull/)
 
 # スクリプトリスト
+
+1. [make_todo_index.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#make_todo_indexsh)
+1. [./get_ref_md/get_ref_md.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#get_ref_mdget_ref_mdsh)
+1. [./get_domain_name/get_domain_name.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#get_domain_nameget_domain_namesh)
+
 ## make_todo_index.sh
 ### 概要
 日誌のはじめに書く行をクリップボードに入力する。
@@ -50,15 +57,15 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 #### zzz
 ```
 
-## /get_ref_md/get_ref_md.sh
+## ./get_ref_md/get_ref_md.sh
 ### 概要
 作業記録の途中でWebサイトのURLとタイトルを毎回両方コピーするのが面倒。これを解消する。
 
 すなわち、コマンドを実行することで以下の内容を取得する。
 ```bash
-$ ./get_ref_md.sh url_to_ref
+$ ./get_ref_md.sh reference_url
 #クリップボードに以下を保存する。
-[title of ref](url_to_ref)
+[title of reference](reference_url)
 ```
 しかし、実行によって引数に渡したURLにアクセスする。そのためむやみに実行しないように注意する。
 
@@ -66,9 +73,9 @@ $ ./get_ref_md.sh url_to_ref
 
 ### 使い方
 ```bash
-$ ./get_ref_md.sh url_to_ref
+$ ./get_ref_md.sh reference_url
 #クリップボードに以下を保存する。
-[title of ref](url_to_ref)
+[title of reference](reference_url)
 ```
 
 ### Nokogiri
@@ -106,7 +113,7 @@ print doc.at('title').inner_html.gsub(/[\s]*[\|][\s]*/,"｜")
 - [正規表現 (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/spec=2fregexp.html)
 
 
-## /get_domain_name/get_domain_name.sh
+## ./get_domain_name/get_domain_name.sh
 ### 背景
 　Google検索ではドメインを指定して検索することができる。例えばgithub.comのサイトの情報を調べたいときには以下のように検索すれば目的の情報に効果的にたどり着くことができる。
 
@@ -132,9 +139,12 @@ site:docs.ruby-lang.org/ja/3.1 words_you_want_to_know
 ```bash
 $ ./get_domain_name.sh
 #ドメインのリスト一覧が表示される
+
 $ ./get_domain_name.sh RUBY
+または
 $ ./get_domain_name.sh ruby
 #site:docs.ruby-lang.org/ja をコピーする。
+
 $ ./get_domain_name.sh wrong_word
 入力したキーに対応するドメインがありません
 引数なしで実行すればドメインの一覧が出ます
@@ -182,5 +192,5 @@ Gitコマンドのリファレンスを追加。`man_git`で呼び出す。
 Git Bookから調べる場合は、`git_book`と入力する。
 - [Git - Book](https://git-scm.com/book/ja/v2)
 
-railsのURLをバージョン7.0.4(作成時の最新安定版)
+railsのURLをバージョン7.0.4(作成時の最新安定版)に固定
 - [Ruby on Rails API](https://api.rubyonrails.org/v7.0.4/)
