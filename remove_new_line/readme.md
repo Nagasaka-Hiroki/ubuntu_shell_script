@@ -129,3 +129,57 @@ Railsと同様に`-n`オプションでテスト名を指定して実行でき�
 ファイルの読み込みを追加、以下のメソッド。
 - [IO#readline (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/IO/i/readline.html)
 - [IO#readlines (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/IO/i/readlines.html)
+
+読み込みは一度に終わらせたほうがいいと思ったので今回は`readlines`とした。
+
+`readlines`の場合、空のテキストファイルを渡すと空の配列が返る。
+
+挙動を確認する。
+
+```ruby
+irb(main):017:0> f=File.open("empty_file.txt")
+=> #<File:empty_file.txt>
+irb(main):018:1* f.readlines.each do |x|
+irb(main):019:1*   p x
+irb(main):020:0> end
+=> []
+irb(main):021:0> nil&.readlines
+=> nil
+irb(main):022:1* nil.each do |value|
+irb(main):023:1*   p value
+irb(main):024:0> end
+(irb):22:in '<main>': undefined method 'each' for nil:NilClass (NoMethodError)
+irb(main):025:0* nil&.each do |x|
+irb(main):026:0* p x
+irb(main):027:-> end
+=> nil
+```
+
+疑問：rubyはファイルを閉じなくてもエラーが出ないのか？
+
+次は改行などを置換する。いつもどおり、正規表現の実験は以下を参考。
+- [Rubular: a Ruby regular expression editor](https://rubular.com/)
+
+正規表現は以下
+- [正規表現 (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/spec=2fregexp.html)
+
+まず、ピリオドがない行の最後の改行にマッチさせる。  
+正規表現は以下。
+```ruby
+(?<!\.)[\s]*[\n]
+```
+これにを使うと`ピリオドなし+空白（０個以上）+改行`にマッチする。
+
+- [Regexp#match (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Regexp/i/match.html)
+- [String#gsub (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/String/i/gsub.html)
+
+変換の流れを変える。
+
+1. 改行をすべてスペースにする。
+1. `ピリオド+スペース`を`ピリオド+改行+改行`に変換する。
+
+末尾の対応が変なので配列に変換する。
+
+- [Array#join (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/join.html)
+
+上記のメソッドが便利、配列に変換した後に改行２つを差し込む。
