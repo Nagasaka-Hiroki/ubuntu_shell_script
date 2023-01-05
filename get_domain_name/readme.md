@@ -39,6 +39,11 @@ Git Bookから調べる場合は、`git_book`と入力する。
 railsのURLをバージョン7.0.4(作成時の最新安定版)に固定
 - [Ruby on Rails API](https://api.rubyonrails.org/v7.0.4/)
 
+Rubyの最新バージョン3.2.0がリリースされました。これまでリンクにバージョンを指定していなかったが、念の為`3.1`で現在は開発することが多いのでバージョンを`3.1`に固定。また、最新安定版のリファレンスを追加。`ruby_latest`で呼び出す。
+- [Ruby 3.2.0 リリース](https://www.ruby-lang.org/ja/news/2022/12/25/ruby-3-2-0-released/)
+- [オブジェクト指向スクリプト言語 Ruby リファレンスマニュアル (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/index.html)
+
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
