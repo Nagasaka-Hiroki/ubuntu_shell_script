@@ -181,7 +181,7 @@ rubyのexit文に関しては以下を参考にした。
 
 - [RFC 6455: The WebSocket Protocol](https://www.rfc-editor.org/rfc/rfc6455)
 
-　上記はWebSocketの仕様を示したサイトであり、とても重要なものだと考えている。一応上記の場合は有志の方が日本語に訳してくれている。
+　上記はWebSocketの仕様を示したサイトであり、とても重要なものだと考えている。なお上記の場合は有志の方が日本語に訳してくれている。
 
 - [RFC 6455 - The WebSocket Protocol （日本語訳）](https://triple-underscore.github.io/RFC6455-ja.html)
 
