@@ -183,3 +183,46 @@ irb(main):027:-> end
 - [Array#join (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Array/i/join.html)
 
 上記のメソッドが便利、配列に変換した後に改行２つを差し込む。
+
+とりあえず原型はできた。しかしファイルの閉じ方がないのでファイルからデータを取り出すところをブロックに変換する。
+
+OKリファクタリングできた。リファクタリングで関数の構成が変わったので、合わせて変更。
+
+モジュールができたので処理本体を書いていく。
+
+内容はそんなに難しくない。例外で囲んで例外が起きたらエラーを出して、なかったら結果を出力するだけ。  
+→OK。できた。次はスクリプトから呼び出す。
+
+テスト用の文章を以下に示す。
+```
+this is 
+a test.
+this line is
+the second line.
+this line has many spaces       .
+```
+
+結果は以下。
+```
+this is a test.
+
+this line is the second line.
+
+this line has many spaces.
+```
+
+クリップボードに貼り付けた結果は以下。
+```
+this is a test.
+
+this line is the second line.
+
+this line has many spaces.
+```
+
+OK
+
+ただ、ファイルが空の場合も貼り付けちゃうのでその点を修正。  
+→touch コマンドで一度ファイルを作ると上手く行った。
+
+この段階でOK。最低限動くので一旦終了とする。

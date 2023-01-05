@@ -8,36 +8,35 @@ require_relative '../lib/replace_new_line'
 include Replacement #クラスの外でinclude
 
 class FileOpenTest < Minitest::Test
-    #ファイルを空にする。
+    #テキストを空にする。
     def setup
-        Replacement.inputfile = nil
         Replacement.input_text = ""
     end
-    #モジュールでファイルを開く
-    def test_file_open
+    #モジュールでファイルを開く。ファイルを読み込んで単純に連結する。
+    def test_read_file
         correct_file_path = File.dirname(File.expand_path(__FILE__))+"/testfile.txt"
-        file=Replacement.open_input_file(correct_file_path)
-        assert_instance_of File, file, "Fileクラスのインスタンスではありません。"
+        assert_equal Replacement.read_input_file(correct_file_path), "l1\nl2\nl3"
     end
 
     #間違ったファイル名を指定して失敗させる。
     def test_raise_exception
         wrong_file_path=File.dirname(File.expand_path(__FILE__))+"/wrong_file_name.txt"
         assert_raises(Errno::ENOENT) do
-            Replacement.open_input_file(wrong_file_path)
+            Replacement.read_input_file(wrong_file_path)
         end
     end
     #空のファイルを渡す。
     def test_read_empty_file
         empty_file_path = File.dirname(File.expand_path(__FILE__))+"/empty_file.txt"
-        file = Replacement.open_input_file(empty_file_path)
         #ファイルの中身がない状態でファイルを読み込む。
         #中身がないファイルを読み込んで配列を全部つなげると、""となるはず。
-        assert_equal Replacement.read_input_file, ""
+        assert_equal Replacement.read_input_file(empty_file_path), ""
     end
-    #ファイルがnilのとき読み込み動作は""のはず
+    #nilをブロックに渡すとTypeErrorが出る。（手動で確認) 
     def test_nil_file
-        assert_equal Replacement.read_input_file, ""
+        assert_raises(TypeError) do
+            Replacement.read_input_file
+        end
     end
 end
 
@@ -55,12 +54,6 @@ class RemoveTest < Minitest::Test
         Replacement.input_text = @input_text
     end
     
-    #モジュールのメソッドでファイルの内容を読み込む。
-    #読み込んだテキストはすべて連結し一つの変数にする。
-    def test_read_text
-        assert_equal Replacement.read_input_file, 
-        "this is \na test.\nthis line is\nthe second line.\nthis line has many spaces       .\n"
-    end
     #置換をする。
     def test_replacement
         assert_equal Replacement.replace_input_text, 

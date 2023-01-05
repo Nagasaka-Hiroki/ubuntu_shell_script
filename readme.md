@@ -40,6 +40,7 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 1. [make_todo_index.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#make_todo_indexsh)
 1. [./get_ref_md/get_ref_md.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#get_ref_mdget_ref_mdsh)
 1. [./get_domain_name/get_domain_name.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#get_domain_nameget_domain_namesh)
+1. [./remove_new_line/remove_new_line.sh](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script#remove_new_lineremove_new_linesh)
 
 ## make_todo_index.sh
 ### 概要
@@ -190,4 +191,8 @@ rubyのexit文に関しては以下を参考にした。
 　コマンドを実行すると`vim`が起動する。改行込のテキストを入力するためには、通常のコマンドラインだと不便だと思った。そのためテキストエディタを使い入力する。エディタは何でもいいが、自分がコマンドラインからよく使う`vim`を選択肢した。  
 　`vim`の場合、`Ctrl+Shift+V`でコピーしたものを貼り付けできる（ノーマルモードで貼り付けできた）。テキスト入力が終わったら保存（`:wq`）する。入力の必要がなければ保存せずに終了する（`:q`）。
 
-(現在作成中)
+　以下の挙動をする。
+
+1. ファイルを作成→一行づつに分離してクリップボードにコピー
+1. ファイルが空　→警告を出して終了。
+
