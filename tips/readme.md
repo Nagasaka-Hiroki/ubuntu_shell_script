@@ -76,14 +76,11 @@ readlinkを使ったシンボリックリンクのリンク先のパスを取得
 
 - [/tmpディレクトリ - Linux技術者認定 LinuC｜LPI-Japan](https://linuc.org/study/knowledge/548/)
 
-再起動すると消えるらしい。
+再起動すると消えるらしい。  
+→確認すると消えていた。
 
----
+## prac_completion
+　長くなるので新しくディレクトリを作った。bashの補完に関する練習。今回は`get_domain_name`の引数を補完できないか試す。
 
-## completion_test.sh
-bashのtab補完。`bash-completion`というものでできるらしい。以下参考。
+お試しで`js`を補完するように作成した。`source ./prac_completion/completion_test.sh`としてスクリプトを有効にするとtabで動くようになる。
 
-- [Bashタブ補完自作入門 - Cybozu Inside Out｜サイボウズエンジニアのブログ](https://blog.cybozu.io/entry/2016/09/26/080000)
-- [Bash用の補完スクリプトの作り方 - Qiita](https://qiita.com/nil2/items/8a1544e206928c753a2e)
-
-（未作成状態)
