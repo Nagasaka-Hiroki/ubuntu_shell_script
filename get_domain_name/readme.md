@@ -43,6 +43,8 @@ Rubyの最新バージョン3.2.0がリリースされました。これまで�
 - [Ruby 3.2.0 リリース](https://www.ruby-lang.org/ja/news/2022/12/25/ruby-3-2-0-released/)
 - [オブジェクト指向スクリプト言語 Ruby リファレンスマニュアル (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/index.html)
 
+→追記：検索が上手く行かないのでバージョンの固定をやめる。
+
 
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
@@ -57,3 +59,50 @@ Rubyの最新バージョン3.2.0がリリースされました。これまで�
 https://e-words.jp/w/WebSocket.html
 
 現状これらは問題が生じた場合に手動で取得している。ケースとしては少ないので対応はまた別の機会にする。
+
+## 機能の追加
+　使い続けると引数の単語をタブで補完したくなる。tipsで実験的に補完するスクリプトを作成した。試作の過程は`tips/prac_completion/readme.md`に記述している。
+
+　前回（`tips/prac_completion`）の試作では`js`しか補完されない。そのためrubyスクリプトから補完リストを取得できるように変更する。
+
+　新しくファイルを追加する。`completion_get_domain_name.rb`にキーの一覧を出力するコードを記述する。
+
+メソッドは以下を参考。
+- [class Hash (Ruby 3.2 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/class/Hash.html#I_KEYS)
+
+行数のカウントは以下。
+- [Linux: ファイル数をカウントするコマンド｜WWWクリエイターズ](https://www-creators.com/archives/5820)
+
+配列に関して。
+- [配列を使用する｜UNIX &amp; Linux コマンド・シェルスクリプト リファレンス](https://shellscript.sunone.me/array.html)
+
+終了ステータスに関して
+- [終了ステータス｜UNIX &amp; Linux コマンド・シェルスクリプト リファレンス](https://shellscript.sunone.me/exit_status.html)
+
+`/dev/tty`というものがあるらしい。
+- [実用的なシェルスクリプト](https://www.kushiro-ct.ac.jp/yanagawa/ex-2017/3-unix/03.html)
+- [ttyとは？ - Qiita](https://qiita.com/hoge_5555/items/f677f9ec7cd859380426)
+- [ttyとかptsとかについて確認してみる - Qiita](https://qiita.com/toshihirock/items/22de12f99b5c40365369)
+
+タブで補完する時以下の動作になってほしい。
+
+1. 一つに絞れる時→その場で補完
+1. 一つに絞れない時→リストを表示して次のプロンプトで入力したところまでを表示。
+
+しかし２つ目が上手く行かない。  
+→意外と簡単だった。以下でできた。
+
+```bash
+COMPREPLY=($(compgen -W "$key_list" -- "$current_input"))
+```
+
+補完は以下の挙動。
+
+```bash
+$ get_domain_name 
+docker          es              git_book        jammy           man_git         mdn             rails_guide     ruby            
+docker_jp       gh_rails        github          js              man_linux       rails           rails_guide_en  ruby_latest     
+$ get_domain_name
+``` 
+
+これで完成とする。不足があれば後から追加する。

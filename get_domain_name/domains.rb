@@ -8,7 +8,7 @@ class DomainHolder
         mdn:            "developer.mozilla.org/ja/docs",
         js:             "developer.mozilla.org/ja/docs/Web/API",
         es:             "jsprimer.net",
-        ruby:           "docs.ruby-lang.org/ja/3.1",
+        ruby:           "docs.ruby-lang.org/ja",
         ruby_latest:    "docs.ruby-lang.org/ja/latest",
         rails:          "api.rubyonrails.org/v7.0.4",
         rails_guide:    "railsguides.jp",
@@ -45,6 +45,10 @@ class DomainHolder
         else
             false
         end
+    end
+    #キーの一覧を返す
+    def self.print_key_list
+        @domains.keys.join(" ")
     end
     private
     #キーの中で最も長いキーの長さを返す。

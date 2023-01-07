@@ -178,8 +178,17 @@ rubyのexit文に関しては以下を参考にした。
 - [Kernel.#exit (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/method/Kernel/m/exit.html)
 
 ### 追記
-追記は移動しました。追加内容などについて以下に記しています。
-- [./get_domain_name/readme.md](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script/tree/main/get_domain_name)
+
+1. 追記は移動しました。追加内容などについて以下に記しています。
+    - [./get_domain_name/readme.md](https://github.com/Nagasaka-Hiroki/ubuntu_shell_script/tree/main/get_domain_name)
+1. tab補完を追加した。以下の動作動作。
+```bash
+$ get_domain_name ←ここでtabを2回押す。
+docker          es              git_book        jammy           man_git         mdn             rails_guide     ruby            
+docker_jp       gh_rails        github          js              man_linux       rails           rails_guide_en  ruby_latest     
+$ get_domain_name
+``` 
+使い方は、`./get_domain_name/completion_get_domain_name.sh`を`~/bashrc`に追加し読み込む。
 
 ## ./remove_new_line/remove_new_line.sh
 ### 背景
