@@ -104,7 +104,7 @@ Copyright 2008 -- 2021 by Mike Dalessio, Aaron Patterson, Yoko Harada, Akinori M
 [５分で一通り理解できる！Linuxのリダイレクト 使い方と種類まとめ](https://eng-entrance.com/linux-redirect)
 1. セキュリティに関する通知が後日届いたためGemfileの内容を変更して`bundle update`を実行。
 
-### 改良
+### 改良1
 　タイトルによっては`|（パイプ）`が入っていることがある。しかしマークダウンでは表の一つとして認識されて修正が面倒になる。そのため`｜（全角のパイプ）`に変換すると回避できるため、置換する処理を加える。
 
 置換の方法は正規表現を使う。以下のサイトを使うととても便利である。
@@ -122,6 +122,13 @@ print doc.at('title').inner_html.gsub(/[\s]*[\|][\s]*/,"｜")
 またrubyの正規表現については以下に書かれている。
 - [正規表現 (Ruby 3.1 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/doc/spec=2fregexp.html)
 
+### 改良2
+　クリップボードから貼り付けるときは`Ctrl+Shift+V`で行っていた。タブ補完の試作をしたところ、クリップボードの内容も貼り付けられそうだと思った。
+
+　タブ補完でクリップボードの内容を貼り付けられるようにした。クリップボードの内容の貼り付け方については以下を参考にした。
+- [コマンドの出力を「コピペ」したいなら「 xclip 」を使おう！【pbcopy・pbpaste】｜LFI](https://linuxfan.info/xclip)
+
+　使い方は、`./get_ref_md/completion_get_ref_md.sh`を`~/.bashrc`で読み込むように設定する。また、エイリアスは`~/.bash_alias`に設定する。コマンド名は`get_ref_md`として設定したときに動くように設定している。
 
 ## ./get_domain_name/get_domain_name.sh
 ### 背景
