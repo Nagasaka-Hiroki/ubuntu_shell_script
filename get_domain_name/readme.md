@@ -45,6 +45,8 @@ Rubyの最新バージョン3.2.0がリリースされました。これまで�
 
 →追記：検索が上手く行かないのでバージョンの固定をやめる。
 
+シェルスクリプトのリンクを追加。`sh`で呼び出す。
+- [UNIX &amp; Linux コマンド・シェルスクリプト リファレンス](https://shellscript.sunone.me/)  
 
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
@@ -105,4 +107,19 @@ docker_jp       gh_rails        github          js              man_linux       
 $ get_domain_name
 ``` 
 
-これで完成とする。不足があれば後から追加する。
+これで完成とする。不足があれば後から追加する。→コードを配置して実行した結果失敗した。エラーに対応する。以下。
+
+---
+
+コードを配置して実行した結果以下のエラーが出た。
+
+```bash
+$ get_domain_name ruby: No such file or directory -- /usr/bin/completion_get_domain_name.rb (LoadError)
+```
+
+ソースコードの位置の特定方法を以下に変更した。
+```bash
+local path2script=$(dirname $(readlink -f "$(which $command_name)"))
+```
+
+---

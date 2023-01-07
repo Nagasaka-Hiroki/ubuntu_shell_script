@@ -4,7 +4,7 @@ _get_domain_name_bash_completion()
     #引数の数は一つでいい。
     if [ "${COMP_CWORD}" -le 1 ]; then
         #スクリプトまでのパスを取得する。
-        local path2script=$(dirname $(readlink -f $0))
+        local path2script=$(dirname $(readlink -f "$(which $command_name)"))
         #rubyスクリプトを実行して補完候補一覧を取得する。
         local key_list=$(ruby $path2script/completion_get_domain_name.rb)
         #現在の入力を取得。
