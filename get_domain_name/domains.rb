@@ -19,6 +19,7 @@ class DomainHolder
         man_linux:      "linuxjm.osdn.jp",
         man_git:        "git-scm.com/docs",
         git_book:       "git-scm.com/book/ja/v2",
+        sh:             "shellscript.sunone.me",
     }
     #一覧を表示する
     def self.show_domains
