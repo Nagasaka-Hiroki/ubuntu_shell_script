@@ -20,6 +20,8 @@ class DomainHolder
         man_git:        "git-scm.com/docs",
         git_book:       "git-scm.com/book/ja/v2",
         sh:             "shellscript.sunone.me",
+        psql_jp:        "postgresql.jp",
+        psql:           "postgresql.org",
     }
     #一覧を表示する
     def self.show_domains

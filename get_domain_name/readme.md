@@ -48,6 +48,10 @@ Rubyの最新バージョン3.2.0がリリースされました。これまで�
 シェルスクリプトのリンクを追加。`sh`で呼び出す。
 - [UNIX &amp; Linux コマンド・シェルスクリプト リファレンス](https://shellscript.sunone.me/)  
 
+PostgreSQLのリンクを追加。それぞれ、`psql_jp`と`psql`で呼び出す。
+- [日本PostgreSQLユーザ会｜日本PostgreSQLユーザ会](https://www.postgresql.jp/)
+- [PostgreSQL: The world's most advanced open source database](https://www.postgresql.org/)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
