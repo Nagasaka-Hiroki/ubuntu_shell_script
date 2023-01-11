@@ -10,6 +10,7 @@ class DomainHolder
         es:             "jsprimer.net",
         ruby:           "docs.ruby-lang.org/ja",
         ruby_latest:    "docs.ruby-lang.org/ja/latest",
+        rubygems:       "rubygems.org",
         rails:          "api.rubyonrails.org/v7.0.4",
         rails_guide:    "railsguides.jp",
         rails_guide_en: "guides.rubyonrails.org",

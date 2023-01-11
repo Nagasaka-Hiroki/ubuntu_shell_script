@@ -52,6 +52,10 @@ PostgreSQLのリンクを追加。それぞれ、`psql_jp`と`psql`で呼び出�
 - [日本PostgreSQLユーザ会｜日本PostgreSQLユーザ会](https://www.postgresql.jp/)
 - [PostgreSQL: The world's most advanced open source database](https://www.postgresql.org/)
 
+RubyGems.orgのリンクを追加。`rubygems`で呼び出す。
+- [RubyGems.org｜your community gem host](https://rubygems.org/)
+
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
