@@ -14,6 +14,7 @@ class DomainHolder
         rails:          "api.rubyonrails.org/v7.0.4",
         rails_guide:    "railsguides.jp",
         rails_guide_en: "guides.rubyonrails.org",
+        redis:          "redis.io",
         docker:         "matsuand.github.io/docs.docker.jp.onthefly",
         docker_jp:      "docs.docker.jp",
         jammy:          "manpages.ubuntu.com/manpages/jammy",

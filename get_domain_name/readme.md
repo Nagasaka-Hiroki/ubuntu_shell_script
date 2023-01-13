@@ -55,6 +55,8 @@ PostgreSQLのリンクを追加。それぞれ、`psql_jp`と`psql`で呼び出�
 RubyGems.orgのリンクを追加。`rubygems`で呼び出す。
 - [RubyGems.org｜your community gem host](https://rubygems.org/)
 
+Redisのリンクを追加。`redis`で呼び出す。
+- [Redis](https://redis.io/)
 
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
