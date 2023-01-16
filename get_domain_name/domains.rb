@@ -24,6 +24,9 @@ class DomainHolder
         sh:             "shellscript.sunone.me",
         psql_jp:        "postgresql.jp",
         psql:           "postgresql.org",
+        npmjs:          "npmjs.com",
+        npm_docs:       "docs.npmjs.com",
+        nodejs_18:      "nodejs.org/dist/latest-v18.x/docs/api",
     }
     #一覧を表示する
     def self.show_domains

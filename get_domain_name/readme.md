@@ -58,6 +58,15 @@ RubyGems.orgのリンクを追加。`rubygems`で呼び出す。
 Redisのリンクを追加。`redis`で呼び出す。
 - [Redis](https://redis.io/)
 
+npmのリンクを追加。`npmjs`で呼び出す。
+- [npm](https://www.npmjs.com/)
+
+npmのdocsのリンクを追加。`npm_docs`で呼び出す。
+- [npm Docs](https://docs.npmjs.com/)
+
+Node.jsの18.13.0（作成時の最新安定版）のドキュメントを追加。`nodejs_18`で呼び出す。
+- [Index｜Node.js v18.13.0 Documentation](https://nodejs.org/dist/latest-v18.x/docs/api/)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
