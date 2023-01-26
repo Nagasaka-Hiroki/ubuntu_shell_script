@@ -67,6 +67,10 @@ npmのdocsのリンクを追加。`npm_docs`で呼び出す。
 Node.jsの18.13.0（作成時の最新安定版）のドキュメントを追加。`nodejs_18`で呼び出す。
 - [Index｜Node.js v18.13.0 Documentation](https://nodejs.org/dist/latest-v18.x/docs/api/)
 
+VSCodeのドキュメントのリンクを追加。`code`で呼び出す。
+- [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
+
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 

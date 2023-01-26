@@ -27,6 +27,7 @@ class DomainHolder
         npmjs:          "npmjs.com",
         npm_docs:       "docs.npmjs.com",
         nodejs_18:      "nodejs.org/dist/latest-v18.x/docs/api",
+        code:           "code.visualstudio.com/docs",
     }
     #一覧を表示する
     def self.show_domains
