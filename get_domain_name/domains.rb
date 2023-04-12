@@ -28,6 +28,8 @@ class DomainHolder
         npm_docs:       "docs.npmjs.com",
         nodejs_18:      "nodejs.org/dist/latest-v18.x/docs/api",
         code:           "code.visualstudio.com/docs",
+        vim:            "vim-jp.org/vimdoc-ja",
+        python:         "docs.python.org/ja/3",
     }
     #一覧を表示する
     def self.show_domains

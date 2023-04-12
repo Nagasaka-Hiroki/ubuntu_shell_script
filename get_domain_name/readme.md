@@ -70,6 +70,11 @@ Node.jsの18.13.0（作成時の最新安定版）のドキュメントを追加
 VSCodeのドキュメントのリンクを追加。`code`で呼び出す。
 - [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
 
+Vimの日本語リファレンスを追加する。`vim`で呼び出す。
+- [help - Vim日本語ドキュメント](https://vim-jp.org/vimdoc-ja/)
+
+Pythonのリファレンスを追加する。`python`で呼び出す。
+- [Python 言語リファレンス — Python 3.11.3 ドキュメント](https://docs.python.org/ja/3/reference/index.html#reference-index)
 
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
