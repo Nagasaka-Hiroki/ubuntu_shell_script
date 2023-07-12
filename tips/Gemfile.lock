@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
-    racc (1.6.1)
+    racc (1.7.1)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  nokogiri (~> 1.13, >= 1.13.10)
+  nokogiri (~> 1.15, >= 1.15.3)
 
 BUNDLED WITH
    2.3.24
