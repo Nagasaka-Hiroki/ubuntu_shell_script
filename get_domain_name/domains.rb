@@ -30,6 +30,7 @@ class DomainHolder
         code:           "code.visualstudio.com/docs",
         vim:            "vim-jp.org/vimdoc-ja",
         python:         "docs.python.org/ja/3",
+        np:             "numpy.org",
     }
     #一覧を表示する
     def self.show_domains

@@ -76,6 +76,9 @@ Vimの日本語リファレンスを追加する。`vim`で呼び出す。
 Pythonのリファレンスを追加する。`python`で呼び出す。
 - [Python 言語リファレンス — Python 3.11.3 ドキュメント](https://docs.python.org/ja/3/reference/index.html#reference-index)
 
+NumPy(Python)のドキュメントを追加する。npで呼び出す。
+- [NumPy documentation — NumPy v1.25 Manual](https://numpy.org/doc/stable/index.html)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
