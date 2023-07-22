@@ -3,22 +3,12 @@
 Ubuntuを便利に使うためのshell scriptを作っていく。  
 分散すると厄介なのでここにまとめておいて管理する。
 
----
-
-追記：  
 処理の一部をRubyに任せることがある。shell scriptというタイトルだが、あくまでも目的はUbuntuを便利に使うことである。そのためRubyに任せた方がいい場合は積極的にRubyを使用する。Rubyを選択する理由は、Rubyの学習を兼ねてである。
 
-Rubyのバージョンは`3.1.2`としている。←2022/12/25に最新の3.2.0が発表されたが、rbenvで最新安定版として表示されないので今は変更しない。(`rbenv install -l`で`3.2.0`が表示されない。)
-
-追記（2023/3/3):  
-OSを入れ直し環境を再構築する過程でrubyのバージョンが`3.1.2`から`3.1.3`になっていることに気づいた。以前（上記の追記）の段階ではrbenv上では`3.1.3`はなかったと思うが今からでもアップデートする。なお、アップデートの概要は以下。
-
-- [Ruby 3.1.3 リリース](https://www.ruby-lang.org/ja/news/2022/11/24/ruby-3-1-3-released/)
-
----
+現在使用しているrubyのバージョンは`3.1.4`である。
 
 ## 操作記録
-### ソースの入手とコマンド化
+### ソースの入手とコマンド化（`/usr/local/bin`に配置する場合）
 コマンド化の操作を備忘録として記録する。  
 `/usr/local/bin`にファイルをダウンロードし、`/usr/bin`にシンボリックリンクを作成。必要に応じて`~/.bash_aliases`にエイリアスを作成して入力を短縮する。コマンド化するスクリプトファイルを`xxx.sh`としコマンドを`xxx`として作成する。
 ```
@@ -29,16 +19,29 @@ $ sudo ln -s /usr/local/bin/ubuntu_shell_script/xxx.sh /usr/bin/xxx
 上記の一連のコマンドで新しいコマンド`xxx`が使えるようになったはず。  
 もしターミナルの再起動が必要であれば`exec $SHELL -l`でその場で再起動できるはず。
 
-また、新しいスクリプトが作成された場合は`git pull`コマンドでリポジトリの更新を取得すれば良い。
-
-追記：  
-スクリプトの修正を`push`したあとは、単純に`sudo git pull`で変更を取得すれば更新できる。
+また、新しいスクリプトが作成された場合は`sudo git pull`コマンドでリポジトリの更新を取得すれば良い。
 
 - 参考  
 > - [新しいLinuxの教科書(SB Creativeのサイトに飛びます)](https://www.sbcr.jp/product/4797380941/)
 > - [https://blog.katsubemakito.net/articles/install_plantuml_for_ubuntu](https://blog.katsubemakito.net/articles/install_plantuml_for_ubuntu)
 > - [https://qiita.com/valzer0/items/67a4c8bf2b1be0fc825a](https://qiita.com/valzer0/items/67a4c8bf2b1be0fc825a)
 > - [https://codelikes.com/git-pull/](https://codelikes.com/git-pull/)
+
+### ソースの入手とコマンド化（`/home/$USER`以降に配置する場合）
+　`rbenv`でrubyをインストールすると、`/usr/local/bin`で`bundle install`などのコマンドを実行できない。その場合ユーザーのホームディレクトリ以下に配置する。
+
+```bash
+#$path2scriptsは保存したいパスを指定する。
+git clone git@github.com:Nagasaka-Hiroki/ubuntu_shell_script.git ~/$path2scripts
+cd $path2scripts #Gemfileがあるディレクトリに移動して`bundle install`を実行する。
+```
+以降は`/usr/local/bin`に配置する場合と同様の作業。<br />
+加えてtab補完を有効にするには各ディレクトリの`completion`から始まるシェルスクリプトを読み込むように`~/.bashrc`に追記する。例えば`./get_domain_name`の場合は以下を追記する。
+
+```bash
+#./get_domain_nameのタブ補完を有効にするために、以下を~/.bashrcに追記する。
+. ~/$path2scripts/get_domain_name/completion_get_domain_name.sh
+```
 
 # スクリプトリスト
 
