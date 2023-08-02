@@ -79,6 +79,12 @@ Pythonのリファレンスを追加する。`python`で呼び出す。
 NumPy(Python)のドキュメントを追加する。npで呼び出す。
 - [NumPy documentation — NumPy v1.25 Manual](https://numpy.org/doc/stable/index.html)
 
+PHPのマニュアルを追加する。`php`で呼び出す。
+- [PHP: PHP マニュアル - Manual ](https://www.php.net/manual/ja/index.php)
+
+Packagistのリンクを追加する。'packagist`で呼び出す。
+- [Packagist](https://packagist.org/)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
