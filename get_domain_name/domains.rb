@@ -31,8 +31,6 @@ class DomainHolder
         vim:            "vim-jp.org/vimdoc-ja",
         python:         "docs.python.org/ja/3",
         np:             "numpy.org",
-        php:            "php.net",
-        packagist:      "packagist.org",
     }
     #一覧を表示する
     def self.show_domains
