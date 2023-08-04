@@ -31,6 +31,7 @@ class DomainHolder
         vim:            "vim-jp.org/vimdoc-ja",
         python:         "docs.python.org/ja/3",
         np:             "numpy.org",
+        laravel9_api:   "https://laravel.com/api/9.x/",
     }
     #一覧を表示する
     def self.show_domains

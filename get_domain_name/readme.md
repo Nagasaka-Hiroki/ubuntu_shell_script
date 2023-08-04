@@ -79,6 +79,9 @@ Pythonのリファレンスを追加する。`python`で呼び出す。
 NumPy(Python)のドキュメントを追加する。npで呼び出す。
 - [NumPy documentation — NumPy v1.25 Manual](https://numpy.org/doc/stable/index.html)
 
+Laravel9.x APIのリンクを追加する。`laravel9_api`で呼び出す。
+- [Laravel9.x API](https://laravel.com/api/9.x/)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
