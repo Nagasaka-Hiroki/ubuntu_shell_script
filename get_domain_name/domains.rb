@@ -34,6 +34,7 @@ class DomainHolder
         laravel9_api:   "laravel.com/api/9.x/",
         laravel9_docs:  "readouble.com/laravel/9.x/ja/",
         laravel9_en:    "laravel.com/docs/9.x/",
+        gradle:         "docs.gradle.org",
     }
     #一覧を表示する
     def self.show_domains

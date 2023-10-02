@@ -86,6 +86,9 @@ Laravel9.xのドキュメントの英語及び日本語を両方追加する。`
 - [Laravel 9.x - The PHP Framework For Web Artisans](https://laravel.com/docs/9.x)
 - [Laravel 9.x 日本語ドキュメント](https://readouble.com/laravel/9.x/ja/installation.html)
 
+gradleのリンクを追加。`gradle`で呼び出す。
+- [Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
+
 ## 挙動の確認
 　使い続けるといくつか動作が上手く行かないパターンがある。例えば次のパターン
 
